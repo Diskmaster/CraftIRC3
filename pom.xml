@@ -96,6 +96,7 @@
         <configuration>
           <outputPrefix>git-</outputPrefix>
           <outputPostfix></outputPostfix>
+          <!-- Disk sez: Default format is with quotes, and escaped. Should go without saying, keep them escaped if used here. ( \" ) -->
           <outputFormat>--pretty=format:%h</outputFormat>
         </configuration>
         <executions>
