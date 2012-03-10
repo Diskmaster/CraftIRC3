@@ -38,7 +38,7 @@
     <dependency>
       <groupId>net.milkbowl.vault</groupId>
       <artifactId>Vault</artifactId>
-      <version>1.2.9-SNAPSHOT</version>
+      <version>1.2.12-SNAPSHOT</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
@@ -124,8 +124,8 @@
                <file>target/classes/plugin.yml</file>
                <replacements>
                    <replacement>
-                       <token>3.2</token>
-                       <value>3.2-${describe}</value>
+                       <token>3.4</token>
+                       <value>3.4-${describe}</value>
                    </replacement>         
                </replacements>
            </configuration>
