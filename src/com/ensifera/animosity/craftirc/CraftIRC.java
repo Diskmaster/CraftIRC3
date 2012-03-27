@@ -1,9 +1,6 @@
 package com.ensifera.animosity.craftirc;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -222,6 +219,11 @@ public class CraftIRC extends JavaPlugin {
             this.setDebug(this.cDebug());
         } catch (final Exception e) {
             e.printStackTrace();
+        }
+        try {
+            new Metrics(this).start();
+        } catch (final IOException e) {
+            //Meh.
         }
     }
 
@@ -697,6 +699,9 @@ public class CraftIRC extends JavaPlugin {
         boolean success = true;
         for (final EndPoint destination : destinations) {
             final String targetTag = this.getTag(destination);
+            if(targetTag.equals(this.cCancelledTag())){
+                continue;
+            }
             msg.setField("target", targetTag);
             //Check against path filters
             if ((msg instanceof RelayedCommand) && this.matchesFilter(msg, this.cPathFilters(sourceTag, targetTag))) {
