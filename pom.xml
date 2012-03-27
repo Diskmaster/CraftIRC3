@@ -28,18 +28,18 @@
     </pluginRepository>
   </pluginRepositories>
   <dependencies>
-    <!-- Reminder: http://docs.codehaus.org/display/MAVEN/Dependency+Mediation+and+Conflict+Resolution -->
+    <!-- http://docs.codehaus.org/display/MAVEN/Dependency+Mediation+and+Conflict+Resolution Dependency Version Ranges -->
     <dependency>
       <groupId>org.bukkit</groupId>
       <artifactId>bukkit</artifactId>
-      <version>[1.2.4-R0.1-SNAPSHOT,)</version>
+      <version>[1.2.3-R0.2,)</version>
       <type>jar</type>
     </dependency>
-    <!-- You need to locally install this, there is no repo -->
+    <!-- You need to locally install this, there is no known repo -->
     <dependency>
       <groupId>net.milkbowl.vault</groupId>
       <artifactId>Vault</artifactId>
-      <version>[1.2.14-SNAPSHOT,)</version>
+      <version>[1.2.9,)</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
@@ -125,8 +125,8 @@
                <file>target/classes/plugin.yml</file>
                <replacements>
                    <replacement>
-                       <token>3.4</token>
-                       <value>3.4-${describe}</value>
+                       <token>3.6</token>
+                       <value>3.6-${describe}</value>
                    </replacement>         
                </replacements>
            </configuration>
